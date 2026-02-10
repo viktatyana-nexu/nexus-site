@@ -12,7 +12,16 @@
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
-    <nav class="sticky top-0 z-50 bg-white shadow-sm py-4 px-6 flex justify-between items-center text-blue-600 font-bold text-2xl">NEXUS</nav>
+    <nav class="sticky top-0 z-50 bg-white shadow-sm py-4 px-6 flex justify-between items-center text-blue-600 font-bold text-2xl">
+        <div class="flex items-center gap-2 px-2 py-1 bg-blue-50 rounded-lg border border-blue-100 shadow-sm">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <span class="text-2xl font-bold tracking-tighter text-blue-600 italic uppercase">NEXUS</span>
+        </div>
+        <div class="space-x-6 hidden md:flex font-medium text-gray-600 text-sm uppercase">
+            <a href="#gadgets" class="hover:text-blue-600">Гаджеты</a>
+        </div>
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Войти</button>
+    </nav>
     <section class="max-w-7xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-8">
         <div class="bg-red-50 rounded-3xl p-10 border border-red-100 bank-card">
             <h2 class="text-3xl font-black">Альфа-Банк</h2>
@@ -25,18 +34,16 @@
             <button class="mt-8 bg-yellow-400 text-black w-full py-3 rounded-xl font-bold uppercase">Забрать бонус</button>
         </div>
     </section>
-    <section id="gadgets" class="gradient-bg text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-12">Смарт Шопинг</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass p-5 rounded-3xl bank-card text-center"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">iPhone 15 Pro</h4><button class="mt-4 bg-white text-black w-full py-2 rounded-lg font-bold">98 400 ₽</button></div>
-                <div class="glass p-5 rounded-3xl bank-card text-center"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">PS 5 Slim</h4><button class="mt-4 bg-white text-black w-full py-2 rounded-lg font-bold">49 000 ₽</button></div>
-                <div class="glass p-5 rounded-3xl bank-card border-blue-500 border-2 text-center shadow-lg"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold text-blue-300">AirPods Pro 2</h4><button class="mt-4 bg-blue-500 text-white w-full py-2 rounded-lg font-bold">18 200 ₽</button></div>
-                <div class="glass p-5 rounded-3xl bank-card text-center"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">Laptop MSI</h4><button class="mt-4 bg-white text-black w-full py-2 rounded-lg font-bold">76 800 ₽</button></div>
-            </div>
+    <section id="gadgets" class="gradient-bg text-white py-20 px-6 text-center">
+        <h2 class="text-4xl font-black mb-12">Смарт Шопинг</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto text-left">
+            <div class="glass p-5 rounded-3xl bank-card flex flex-col"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">iPhone 15 Pro</h4><button class="mt-auto bg-white text-black w-full py-2 rounded-lg font-bold">98 400 ₽</button></div>
+            <div class="glass p-5 rounded-3xl bank-card flex flex-col"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">PS 5 Slim</h4><button class="mt-auto bg-white text-black w-full py-2 rounded-lg font-bold">49 000 ₽</button></div>
+            <div class="glass p-5 rounded-3xl bank-card border-blue-500 border-2 flex flex-col shadow-lg shadow-blue-500/20"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">AirPods Pro 2</h4><button class="mt-auto bg-blue-500 text-white w-full py-2 rounded-lg font-bold">18 200 ₽</button></div>
+            <div class="glass p-5 rounded-3xl bank-card flex flex-col"><img src="https://images.unsplash.com" class="h-40 w-full object-cover rounded-2xl mb-4"><h4 class="font-bold">Laptop MSI</h4><button class="mt-auto bg-white text-black w-full py-2 rounded-lg font-bold">76 800 ₽</button></div>
         </div>
     </section>
-    <footer class="bg-gray-900 text-gray-500 py-10 text-center border-t border-gray-800"><div class="text-xl font-bold text-white mb-2 uppercase">NEXUS</div><p class="text-[10px]">© 2025 NEXUS PROJECT. ALL RIGHTS RESERVED.</p></footer>
+    <footer class="bg-gray-900 text-gray-500 py-10 text-center"><div class="text-xl font-bold text-white mb-2 uppercase">NEXUS</div><p class="text-[10px]">© 2025 NEXUS PROJECT. ALL RIGHTS RESERVED.</p></footer>
     <script>document.querySelectorAll('button').forEach(btn => { btn.onclick = () => alert('🚀 Заявка отправлена! Менеджер свяжется с вами через 5 минут.'); });</script>
 </body>
 </html>
