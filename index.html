@@ -3,24 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>NEXUS | ВЫБОР БАНКА</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NEXUS | PREMIUM HOLDING</title>
+    <style>
+        :root { --gold: #bf953f; --light-gold: #ffd700; --bg: #010d0a; --alfa: #ef3124; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: white; overflow-x: hidden; }
+
+        /* ГЛАВНЫЙ ВХОД */
+        .welcome-screen { height: 100vh; display: flex; }
+        .gate { width: 50%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; transition: 0.6s; cursor: pointer; border: none; background: none; }
+        .t-gate { background: linear-gradient(to bottom, #010d0a, #0a0a0a); border-right: 2px solid var(--gold); }
+        .t-gate:hover { background: var(--gold); }
+        .t-gate:hover h1, .t-gate:hover p { color: #000; }
+        .alfa-gate { background: linear-gradient(to bottom, #1a0000, #000); opacity: 0.8; }
+        .gate h1 { font-size: clamp(30px, 8vw, 60px); font-weight: 900; letter-spacing: 5px; margin-bottom: 20px; transition: 0.3s; }
+        .t-text { color: var(--gold); }
+        .alfa-text { color: var(--alfa); }
+        .gate p { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; opacity: 0.7; color: #fff; }
+
+        /* ВИТРИНА */
+        .showcase { min-height: 100vh; padding: 80px 20px; background-image: radial-gradient(circle at center, rgba(191, 149, 63, 0.15) 0%, #010d0a 100%); display: flex; flex-direction: column; align-items: center; }
+        .complex-wrapper { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1400px; margin-top: 40px; }
+        .side-column { display: flex; flex-direction: column; gap: 15px; width: 330px; }
+        .tile { background: #0a0a0a; border: 2.5px solid var(--gold); border-radius: 30px; padding: 20px; text-align: left; text-decoration: none; color: white; transition: 0.3s; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+        .tile:hover { transform: translateY(-5px); border-color: #fff; box-shadow: 0 10px 25px rgba(191,149,63,0.3); }
+        .card { width: 400px; min-height: 680px; border-radius: 50px; border: 4px solid #fff; background: linear-gradient(165deg, var(--light-gold), #ff8c00); color: #000; padding: 40px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 0 25px gold; }
+        .btn-tile { padding: 14px; border-radius: 20px; font-size: 12px; font-weight: 900; text-transform: uppercase; text-align: center; border: 2px solid #fff; display: block; text-decoration: none; transition: 0.3s; }
+        .btn-tile:hover { background: #fff; color: #000; }
+        .tag { color: #2ecc71; font-weight: 900; font-size: 10px; text-transform: uppercase; margin-bottom: 5px; display: block; }
+
+        /* ПОМОЩНИКИ */
+        .as-wrap { position: fixed; bottom: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+        #fox-wrap { right: 20px; } #sq-wrap { left: 20px; }
+        .as-img { width: 70px; height: 70px; background: rgba(0,0,0,0.9); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; box-shadow: 0 0 20px gold; }
+        .bubble { background: white; color: black; padding: 12px; border-radius: 15px; font-size: 12px; font-weight: 900; width: 180px; margin-bottom: 10px; display: none; border: 2px solid var(--gold); text-align: center; }
+    </style>
 </head>
-<body style="background:#000; height:100vh; display:flex; margin:0; overflow:hidden;">
+<body>
 
-    <!-- ЗОЛОТАЯ ДВЕРЬ С МАСКИРОВКОЙ (ЧТОБЫ БЫЛА АНКЕТА) -->
-    <a href="https://t-cpa.ru" target="_blank" rel="noreferrer" style="width:50%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-decoration:none; background:linear-gradient(to bottom, #010d0a, #0a0a0a); border-right:2px solid #bf953f;">
-        <p style="color:#fff; letter-spacing:3px; opacity:0.7; text-transform:uppercase;">ПРЕМИАЛЬНЫЙ СЕРВИС</p>
-        <h1 style="color:#bf953f; font-size:clamp(30px, 8vw, 60px); font-weight:900; letter-spacing:5px;">T-BANK</h1>
-        <div style="font-size:40px;">💎</div>
-    </a>
+<!-- ЛИЦЕВАЯ -->
+<div class="welcome-screen">
+    <div onclick="document.getElementById('tbank-section').scrollIntoView();" class="gate t-gate">
+        <p>ПРЕМИАЛЬНЫЙ СЕРВИС</p>
+        <h1 class="t-text">T-BANK</h1>
+        <div style="font-size: 40px;">💎</div>
+    </div>
+    <div onclick="alert('Секция в разработке. Переходите в Т-Банк!')" class="gate alfa-gate">
+        <p>НОВЫЕ ВОЗМОЖНОСТИ</p>
+        <h1 class="alfa-text">ALFA</h1>
+        <div style="font-size: 40px;">🚩</div>
+    </div>
+</div>
 
-    <!-- КРАСНАЯ ДВЕРЬ -->
-    <a href="#" style="width:50%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-decoration:none; background:linear-gradient(to bottom, #1a0000, #000);">
-        <p style="color:#fff; letter-spacing:3px; opacity:0.7; text-transform:uppercase;">НОВЫЕ ВОЗМОЖНОСТИ</p>
-        <h1 style="color:#ef3124; font-size:clamp(30px, 8vw, 60px); font-weight:900; letter-spacing:5px;">ALFA</h1>
-        <div style="font-size:40px;">🚩</div>
-    </a>
+<div id="fox-wrap" class="as-wrap"><div id="fb" class="bubble"></div><div class="as-img">🦊</div></div>
+<div id="sq-wrap" class="as-wrap"><div id="sb" class="bubble"></div><div class="as-img">🐿️</div></div>
+
+<!-- ВИТРИНА -->
+<section id="tbank-section" class="showcase">
+    <h2 style="color:var(--gold); letter-spacing: 4px; text-transform: uppercase;">ВИТРИНА ПРОДУКТОВ Т-БАНКА</h2>
+    <div class="complex-wrapper">
+        <div class="side-column">
+            <!-- ALL AIRLINES -->
+            <a href="https://www.tbank.ru" target="_blank" class="tile" onmouseover="talk('🦊 Бесплатный полет!','🐿️ Страховка в подарок!')" onmouseout="shush()">
+                <span class="tag">ПУТЕШЕСТВИЯ</span>
+                <h3>ALL AIRLINES</h3>
+                <p>Мили за любые покупки. 12 месяцев без абонентской платы!</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">В ПОЛЕТ</div>
+            </a>
+            <!-- АРОМАКАРТА -->
+            <a href="https://www.tbank.ru/cards/debit-cards/tinkoff-black/form/aroma-cards/?utm_term=tcpa&utm_medium=drp.UNIQ_UTIL_100_OT&utm_source=45928_tb&utm_campaign=debit.black_tb_aroma&tcpa_click_id=d68c4854180e11f183720e2ea97cae31edc2f2d3e1854a95806735543ce381df&cookie_exp=2160" target="_blank" class="tile" onmouseover="talk('🦊 Она реально пахнет!','🐿️ Удиви всех арома-дизайном!')" onmouseout="shush()">
+                <span class="tag">ЭКСКЛЮЗИВ</span>
+                <h3>АРОМАКАРТА</h3>
+                <p>Выбери свой аромат. Кэшбэк до 30% на всё.</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ОФОРМИТЬ</div>
+            </a>
+        </div>
+
+        <!-- ГЛАВНАЯ КАРТА BLACK -->
+        <div class="card" onmouseover="talk('🦊 Лучшая карта в РФ!','🐿️ Кэшбэк рублями!')" onmouseout="shush()">
+            <div>
+                <span class="tag" style="color:#000; border:1.5px solid #000; padding:2px 8px; border-radius:10px;">ВЫБОР НОМЕР 1</span>
+                <h2 style="font-size:34px; font-weight:900; line-height:1; color:#000; margin-top:10px;">T-BANK BLACK</h2>
+                <p style="color:#000; font-weight:700; margin-top:20px; font-size:16px;">🎁 Кэшбэк до 30% рублями<br>🎁 Снятие 0 ₽ везде<br>🎁 Переводы 0 ₽ по РФ</p>
+            </div>
+            <a href="https://www.tbank.ru/cards/debit-cards/tinkoff-black/?dco_ic=1e6ad521-f361-4ca0-b66d-2338f2e8063c&utm_term=tcpa&utm_medium=drp.UTIL&utm_source=45928_tb&utm_campaign=debit.black_tb_golden&tcpa_click_id=b00e94ac180e11f1b8c5e24284a6f6b3da6842fc398741088267485fd913a613&cookie_exp=2160" target="_blank" class="order-btn">ЗАКАЗАТЬ СЕЙЧАС</a>
+        </div>
+
+        <div class="side-column">
+            <!-- МОЛОДЕЖНАЯ -->
+            <a href="https://www.tbank.ru" target="_blank" class="tile" onmouseover="talk('🦊 Хайповый дизайн!','🐿️ 0 ₽ обслуживание всегда!')" onmouseout="shush()">
+                <span class="tag">BLACK YOUNG (14-22)</span>
+                <h3>МОЛОДЕЖНАЯ</h3>
+                <p>Кэшбэк за игры и фастфуд. Стикеры в подарок.</p>
+                <div class="btn-tile" style="background:#fff; color:#000; border:none;">ЗАБРАТЬ</div>
+            </a>
+            <!-- НОСТАЛЬГИЯ -->
+            <a href="https://www.tbank.ru/cards/debit-cards/tinkoff-black/nostalgia/?utm_term=tcpa&utm_medium=drp.UNIQ_UTIL_100_OT&utm_source=45928_tb&utm_campaign=debit.black_tb_nostalgia&tcpa_click_id=fe31848c180e11f1ae00e24284a6f6b3caa8e51857d543fa88e4ee8c90e8a18c&cookie_exp=2160" target="_blank" class="tile" onmouseover="talk('🦊 Олдскульный дизайн!','🐿️ Назад в 90-е!')" onmouseout="shush()">
+                <span class="tag">СТИЛЬ</span>
+                <h3>НОСТАЛЬГИЯ</h3>
+                <p>Легендарный дизайн. Все бонусы Black внутри.</p>
+                <div class="btn-tile" style="background:var(--gold); color:#000; border:none;">ХОЧУ ЕЁ</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function talk(f, s) {
+        document.getElementById('fb').innerText = f;
+        document.getElementById('sb').innerText = s;
+        document.getElementById('fb').style.display = 'block';
+        document.getElementById('sb').style.display = 'block';
+    }
+    function shush() {
+        document.getElementById('fb').style.display = 'none';
+        document.getElementById('sb').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
