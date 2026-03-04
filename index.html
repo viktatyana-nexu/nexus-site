@@ -2,49 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIKTANYA BUILD — Снабжение объектов ЦЧР</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>NEXUS | ВЫБЕРИТЕ ВАШ БАНК</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #000; height: 100vh; display: flex; overflow: hidden; }
+        .gate { width: 50%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; transition: 0.6s; cursor: pointer; position: relative; }
+        .t-gate { background: linear-gradient(to bottom, #010d0a, #0a0a0a); border-right: 2px solid #bf953f; }
+        .t-gate:hover { background: #bf953f; }
+        .t-gate:hover h1, .t-gate:hover p { color: #000; }
+        .alfa-gate { background: linear-gradient(to bottom, #1a0000, #000); }
+        .alfa-gate:hover { background: #ef3124; }
+        h1 { font-size: clamp(30px, 8vw, 60px); font-weight: 900; letter-spacing: 5px; margin-bottom: 20px; transition: 0.3s; text-transform: uppercase; }
+        .t-text { color: #bf953f; }
+        .alfa-text { color: #ef3124; }
+        .gate:hover .alfa-text { color: #fff; }
+        p { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; opacity: 0.7; color: #fff; margin-bottom: 10px; }
+        .icon { font-size: 40px; }
+    </style>
 </head>
-<body class="bg-slate-950 text-white font-sans antialiased">
-    <main class="min-h-screen flex flex-col p-6 md:p-16 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px]"></div>
-        <div class="relative z-10 flex justify-between items-start mb-16">
-            <div>
-                <h1 class="text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none text-white">VIKTANYA<br><span class="text-blue-500">BUILD</span></h1>
-                <p class="text-[10px] uppercase tracking-[0.5em] text-slate-500 font-bold mt-2 leading-none">viktanya.ru • Бобровский филиал</p>
-            </div>
-            <div class="text-right">
-                <p class="text-[10px] uppercase font-bold text-slate-500 mb-1 tracking-widest">Прямая линия:</p>
-                <a href="tel:+79601171022" class="text-xl md:text-2xl font-black tracking-tighter text-white hover:text-blue-400 transition leading-none">8 (960) 117-10-22</a>
-            </div>
-        </div>
-        <div class="relative z-10 mb-12">
-            <h2 class="text-5xl md:text-8xl font-black uppercase leading-[0.85] tracking-tighter italic text-white">КОМПЛЕКСНОЕ<br>СНАБЖЕНИЕ<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-500 italic">ОБЪЕКТОВ</span></h2>
-            <p class="mt-8 max-w-xl text-lg text-slate-400 font-medium leading-relaxed italic">Единое окно поставок для застройщиков и ритейла Воронежской области. Выберите направление:</p>
-        </div>
-        <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow">
-            <div class="group relative bg-slate-900/50 border border-slate-800 rounded-3xl p-8 flex flex-col justify-end overflow-hidden">
-                <h3 class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2 italic">Департамент холода</h3>
-                <h2 class="text-3xl font-black italic uppercase leading-none mb-4 text-white">MAGMA<br>& РУСЬ</h2>
-                <div class="mt-8 text-blue-500/50 font-black text-xs uppercase tracking-widest italic">В разработке</div>
-            </div>
-            <div class="group relative bg-slate-900/50 border border-slate-800 rounded-3xl p-8 flex flex-col justify-end overflow-hidden">
-                <h3 class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 italic">Инженерный центр</h3>
-                <h2 class="text-3xl font-black italic uppercase leading-none mb-4 text-white">ТЕХНО<br>НИКОЛЬ</h2>
-                <div class="mt-8 text-orange-500/50 font-black text-xs uppercase tracking-widest italic">Спецификации</div>
-            </div>
-            <!-- Ссылка на ЖБИ с кодом 69a498ce7a609 -->
-           <a href="https://shop.gb-nev.ru/?tracking=69a498ce7a609" target="_blank" class="group relative bg-slate-800 border border-slate-700 rounded-3xl p-8 flex flex-col justify-end overflow-hidden hover:border-green-500 transition-all duration-500 shadow-2xl">
-                <div class="absolute top-0 left-0 w-full h-1 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                <h3 class="text-xs font-bold text-green-400 uppercase tracking-widest mb-2 italic tracking-tighter">Логистика Бобров</h3>
-                <h2 class="text-3xl font-black italic uppercase leading-none mb-4 text-white uppercase italic">БЕТОН<br>& ЖБИ</h2>
-                <p class="text-sm text-slate-400 group-hover:text-slate-200 transition italic">Кольца, плиты и кирпич ВКСМ / БРАЕР.</p>
-                <div class="mt-8 text-green-400 font-black text-xs uppercase tracking-widest flex items-center gap-2 italic">Заказать сейчас <span class="group-hover:translate-x-2 transition-transform">→</span></div>
-            </a>
-        </div>
-    </main>
+<body>
+
+    <!-- ЛЕВАЯ ДВЕРЬ: Т-БАНК (ВЕДЕТ НА ТВОЮ ВИТРИНУ tbank.html) -->
+    <a href="tbank.html" class="gate t-gate">
+        <p>ПРЕМИАЛЬНЫЙ СЕРВИС</p>
+        <h1 class="t-text">T-BANK</h1>
+        <div class="icon">💎</div>
+    </a>
+
+    <!-- ПРАВАЯ ДВЕРЬ: АЛЬФА-БАНК (ПОКА ЗАКРЫТА) -->
+    <a href="#" class="gate alfa-gate">
+        <p>НОВЫЕ ВОЗМОЖНОСТИ</p>
+        <h1 class="alfa-text">ALFA</h1>
+        <div class="icon">🚩</div>
+    </a>
+
 </body>
 </html>
-
