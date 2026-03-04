@@ -3,39 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>NEXUS | ВЫБОР БАНКА</title>
+    <title>NEXUS | ПРОВЕРЕНО</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: #000; height: 100vh; display: flex; overflow: hidden; }
-        .gate { width: 50%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; transition: 0.6s; cursor: pointer; position: relative; }
-        .t-gate { background: linear-gradient(to bottom, #010d0a, #0a0a0a); border-right: 2px solid #bf953f; }
-        .t-gate:hover { background: #bf953f; }
-        .t-gate:hover h1, .t-gate:hover p { color: #000; }
-        .alfa-gate { background: linear-gradient(to bottom, #1a0000, #000); }
-        .alfa-gate:hover { background: #ef3124; }
-        h1 { font-size: clamp(30px, 8vw, 60px); font-weight: 900; letter-spacing: 5px; margin-bottom: 20px; transition: 0.3s; text-transform: uppercase; }
-        .t-text { color: #bf953f; }
-        .alfa-text { color: #ef3124; }
-        .gate:hover .alfa-text { color: #fff; }
-        p { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; opacity: 0.7; color: #fff; margin-bottom: 10px; }
-        .icon { font-size: 40px; }
-    </style>
 </head>
-<body>
+<body style="background:#000; height:100vh; display:flex; margin:0; overflow:hidden;">
 
-    <!-- ЛЕВАЯ ДВЕРЬ: Т-БАНК (ВЕДЕТ НА tbank.html) -->
-    <a href="tbank.html" class="gate t-gate">
-        <p>ПРЕМИАЛЬНЫЙ СЕРВИС</p>
-        <h1 class="t-text">T-BANK</h1>
-        <div class="icon">💎</div>
+    <!-- ЗОЛОТАЯ ДВЕРЬ: ТВОЯ АНКЕТА БЕЗ ЛИШНИХ СТРАНИЦ -->
+    <a href="https://t-cpa.ru" target="_blank" style="width:50%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-decoration:none; background:linear-gradient(to bottom, #010d0a, #0a0a0a); border-right:3px solid #bf953f;">
+        <p style="color:#fff; letter-spacing:3px; opacity:0.7; text-transform:uppercase;">ПРЕМИАЛЬНЫЙ СЕРВИС</p>
+        <h1 style="color:#bf953f; font-size:clamp(30px, 8vw, 60px); font-weight:900; letter-spacing:5px;">T-BANK</h1>
+        <div style="font-size:40px;">💎</div>
     </a>
 
-    <!-- ПРАВАЯ ДВЕРЬ: АЛЬФА-БАНК -->
-    <a href="#" class="gate alfa-gate">
-        <p>НОВЫЕ ВОЗМОЖНОСТИ</p>
-        <h1 class="alfa-text">ALFA</h1>
-        <div class="icon">🚩</div>
+    <!-- КРАСНАЯ ДВЕРЬ: АЛЬФА -->
+    <a href="#" style="width:50%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-decoration:none; background:linear-gradient(to bottom, #1a0000, #000);">
+        <p style="color:#fff; letter-spacing:3px; opacity:0.7; text-transform:uppercase;">НОВЫЕ ВОЗМОЖНОСТИ</p>
+        <h1 style="color:#ef3124; font-size:clamp(30px, 8vw, 60px); font-weight:900; letter-spacing:5px;">ALFA</h1>
+        <div style="font-size:40px;">🚩</div>
     </a>
 
 </body>
